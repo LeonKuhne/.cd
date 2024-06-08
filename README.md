@@ -21,7 +21,6 @@ function c() {
     ls --color .
   else 
     cd $@
-    pwd
     pwd > $LWD_DIR
     if [ -f "$(pwd)/$C_DIR" ]; then
       . ./"$C_DIR"
