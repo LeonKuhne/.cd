@@ -1,5 +1,5 @@
 # .cd
-> **An extension of cd that executes any .cd file that exists in your destination**
+> **An extension of cd that executes any .cd file that exists in your destination directory**
 - only tested with zsh
 - probably not very secure :}
 
