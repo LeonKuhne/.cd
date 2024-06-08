@@ -1,5 +1,5 @@
 # .cd
-> **an extension of cd that executes any .cd file that exists in your destination**
+> **An extension of cd that executes any .cd file that exists in your destination**
 - only tested with zshrc
 - probably not very secure :}
 
@@ -44,4 +44,10 @@ echo "- Type 'c .' to execute and this script"
 echo "- Start navigating with 'c' instead of 'cd'!"
 EOF
 c .
+```
+
+### Extra
+> I often use 'cc' to clear and navigate at the same time
+```bash
+echo "alias cc='clear && c'" >> ~/.zshrc && source ~/.zshrc
 ```
