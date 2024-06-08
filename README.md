@@ -1,6 +1,6 @@
 # .cd
 > **An extension of cd that executes any .cd file that exists in your destination**
-- only tested with zshrc
+- only tested with zsh
 - probably not very secure :}
 
 ### Usage
