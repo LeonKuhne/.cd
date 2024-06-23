@@ -14,16 +14,16 @@ cat << 'EOF' >> ~/.zshrc
 
 
 # https://github.com/LeonKuhne/.cd/
-LWD_DIR="$HOME/.config/lwd"
-C_DIR=".cd"
+LWD_FILE="$HOME/.config/lwd"
+CD_FILE=".cd"
 function c() {
   if [ -z "$@" ]; then
     ls --color .
   else 
     cd $@
-    pwd > $LWD_DIR
-    if [ -f "$(pwd)/$C_DIR" ]; then
-      . ./"$C_DIR"
+    pwd > $LWD_FILE
+    if [ -f "$(pwd)/$CD_FILE" ]; then
+      . ./"$CD_FILE"
     fi
   fi
 }
@@ -47,6 +47,10 @@ c .
 ```
 
 ### Extra
+> Return to your last working directory when opening a new shell, `cd` can be used for temporary navigation
+```bash
+echo "c $(cat $LWD_FILE)" >> ~/.zshrc && source ~/.zshrc
+```
 > I often use 'cc' to clear and navigate at the same time
 ```bash
 echo "alias cc='clear && c'" >> ~/.zshrc && source ~/.zshrc
