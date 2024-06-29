@@ -49,7 +49,7 @@ c .
 ### Extra
 > Return to your last working directory when opening a new shell, `cd` can be used for temporary navigation
 ```bash
-echo "c $(cat $LWD_FILE)" >> ~/.zshrc && source ~/.zshrc
+echo 'c $(cat $LWD_FILE)' >> ~/.zshrc && source ~/.zshrc
 ```
 > I often use 'cc' to clear and navigate at the same time
 ```bash
