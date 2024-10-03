@@ -12,7 +12,8 @@ c [directory]
 
 ### Install
 ```bash
-cat << 'EOF' >> ~/.zshrc
+rc_file="~/.zshrc"
+cat << 'EOF' >> $rc_file
 
 
 # https://github.com/LeonKuhne/.cd/
@@ -30,7 +31,7 @@ function c() {
   fi
 }
 EOF
-source ~/.zshrc
+source $rc_file
 ```
 
 ### Getting Started
@@ -51,9 +52,9 @@ c .
 ### Extra
 > Return to your last working directory when opening a new shell, `cd` can be used for temporary navigation
 ```bash
-echo 'c $(cat $LWD_FILE)' >> ~/.zshrc && source ~/.zshrc
+echo 'c $(cat $LWD_FILE)' >> $rc_file && source $rc_file
 ```
 > I often use 'cc' to clear and navigate at the same time
 ```bash
-echo "alias cc='clear && c'" >> ~/.zshrc && source ~/.zshrc
+echo "alias cc='clear && c'" >> $rc_file && source $rc_file
 ```
