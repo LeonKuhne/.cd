@@ -12,7 +12,11 @@ c [directory]
 
 ### Install
 ```bash
-rc_file="~/.zshrc"
+# specify rc file
+rc_file="$HOME/.zshrc"
+```
+```bash
+# install script
 cat << 'EOF' >> $rc_file
 
 
